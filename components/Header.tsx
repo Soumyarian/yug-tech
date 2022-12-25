@@ -30,8 +30,8 @@ export const Header = () => {
       </Typography>
       <Divider />
       <List>
-        {menuData.map(menu => {
-          return <MenuItem menu={menu} />;
+        {menuData.map((menu, index) => {
+          return <MenuItem key={index} menu={menu} />;
         })}
       </List>
     </Box>

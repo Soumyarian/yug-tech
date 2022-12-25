@@ -29,9 +29,9 @@ const SubMenu: FC<{ title: string; subMenus: SubMenuItem[] }> = ({
     setAnchorEl(null);
   };
 
-  const menuItems = subMenus.map(menu => {
+  const menuItems = subMenus.map((menu, index) => {
     return (
-      <ListItemButton dense>
+      <ListItemButton dense key={index}>
         <ListItemText
           primary={menu.title}
           secondary={menu.subtitle}
